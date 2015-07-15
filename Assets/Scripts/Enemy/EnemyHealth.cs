@@ -9,7 +9,8 @@ namespace CompleteProject
         public float sinkSpeed = 2.5f;              // The speed at which the enemy sinks through the floor when dead.
         public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
         public AudioClip deathClip;                 // The sound to play when the enemy dies.
-
+		public Transform drops;
+		public float chance;
 
         Animator anim;                              // Reference to the animator.
         AudioSource enemyAudio;                     // Reference to the audio source.
@@ -81,7 +82,9 @@ namespace CompleteProject
 
             // Tell the animator that the enemy is dead.
             anim.SetTrigger ("Dead");
-
+			if (Mathf.Abs (Random.Range (1, 100)) <= chance) {
+				Instantiate (drops, this.transform.position, this.transform.rotation);
+			}
             // Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
             enemyAudio.clip = deathClip;
             enemyAudio.Play ();

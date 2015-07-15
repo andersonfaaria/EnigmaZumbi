@@ -332,6 +332,8 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 50
   deathClip: {fileID: 8300000, guid: 8c615fd0429f34edf85539d70279360d, type: 3}
+  drops: {fileID: 431380, guid: d2a7671c69671b943bf37704a234b142, type: 2}
+  chance: 100
 --- !u!114 &11415352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2615,6 +2617,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: drops
+      value: 
+      objectReference: {fileID: 431380, guid: d2a7671c69671b943bf37704a234b142, type: 2}
+    - target: {fileID: 0}
+      propertyPath: chance
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
